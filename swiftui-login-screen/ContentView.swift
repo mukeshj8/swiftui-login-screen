@@ -15,27 +15,32 @@ struct ContentView: View {
     @State var password: String = ""
     
     var body: some View {
-        VStack {
-            TitleText()
-            TitleImage()
-            TextField("Username", text: $username)
-                .padding()
-                .background(lightGreyColor)
-                .cornerRadius(5.0)
-                .padding(.bottom, 20)
-            SecureField("Password", text: $password)
-                .padding()
-                .background(lightGreyColor)
-                .cornerRadius(5.0)
-                .padding(.bottom, 20)
-            
-            Button(action: {
-                print("login tapped!")
-            }){
-                LoginButtonContent()
-            }
-            
-        }.padding()
+        NavigationView{
+            VStack {
+                TitleText()
+                TitleImage()
+                TextField("Username", text: $username)
+                    .padding()
+                    .background(lightGreyColor)
+                    .cornerRadius(5.0)
+                    .padding(.bottom, 20)
+                SecureField("Password", text: $password)
+                    .padding()
+                    .background(lightGreyColor)
+                    .cornerRadius(5.0)
+                    .padding(.bottom, 20)
+                
+                Button(action: {
+                    
+                    print("login tapped!")
+                }){
+                    NavigationLink(destination: HomeView()){
+                        LoginButtonContent()
+                    }
+                }
+                
+            }.padding()
+        }
     }
 }
 
