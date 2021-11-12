@@ -12,6 +12,7 @@
 		6028F94E273E66C900784643 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6028F94D273E66C900784643 /* Assets.xcassets */; };
 		6028F951273E66C900784643 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6028F950273E66C900784643 /* Preview Assets.xcassets */; };
 		6028F958273E706400784643 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6028F957273E706300784643 /* HomeView.swift */; };
+		6028F95B273E777800784643 /* EmpData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6028F95A273E777700784643 /* EmpData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		6028F94D273E66C900784643 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6028F950273E66C900784643 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6028F957273E706300784643 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		6028F95A273E777700784643 /* EmpData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmpData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 		6028F948273E66C500784643 /* swiftui-login-screen */ = {
 			isa = PBXGroup;
 			children = (
+				6028F959273E775D00784643 /* data */,
 				6028F949273E66C500784643 /* swiftui_login_screenApp.swift */,
 				6028F94B273E66C500784643 /* ContentView.swift */,
 				6028F94D273E66C900784643 /* Assets.xcassets */,
@@ -68,6 +71,14 @@
 				6028F950273E66C900784643 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6028F959273E775D00784643 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				6028F95A273E777700784643 /* EmpData.swift */,
+			);
+			path = data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6028F95B273E777800784643 /* EmpData.swift in Sources */,
 				6028F958273E706400784643 /* HomeView.swift in Sources */,
 				6028F94C273E66C500784643 /* ContentView.swift in Sources */,
 				6028F94A273E66C500784643 /* swiftui_login_screenApp.swift in Sources */,
