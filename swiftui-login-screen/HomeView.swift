@@ -20,17 +20,22 @@ struct HomeView: View {
                 let edesg = emp.desg ?? ""
                 let esal = emp.salary ?? 0.0
                 
-                HStack {
-                    VStack(alignment: .leading) {
-                        Text("EmpId: "+eid).fontWeight(.bold)
-                        Text("Name: "+ename)
-                        Text("Desg: "+edesg)
-                    }.padding(10)
-                    VStack(alignment: .center) {
-                        Text("Salary").fontWeight(.bold)
-                        Text(String(esal))
+                NavigationLink(destination: Text("Hello")){
+                    HStack {
+                        VStack(alignment: .leading) {
+                            Text("EmpId: "+eid).fontWeight(.bold)
+                            Text("Name: "+ename)
+                            Text("Desg: "+edesg)
+                        }.padding(10)
+                        VStack(alignment: .center) {
+                            Text("Salary").fontWeight(.bold)
+                            Text(String(esal))
+                        }
+                    }.padding(10).onTapGesture {
+                        print("detail tapped!")
                     }
-                }.padding(10)
+                }
+                
             }
         }
         .navigationBarBackButtonHidden(true)

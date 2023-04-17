@@ -13,6 +13,9 @@ struct ContentView: View {
     
     @State var username: String = ""
     @State var password: String = ""
+    @State var isLogin: Bool = false
+    @State var showAlert: Bool = false
+    @State var alertMsg: String = ""
     
     var body: some View {
         NavigationView{
@@ -31,12 +34,36 @@ struct ContentView: View {
                     .padding(.bottom, 20)
                 
                 Button(action: {
-                    
-                    print("login tapped!")
+                    /*
+                    if (self.username == ""){
+                        self.isLogin = false
+                        self.showAlert = true
+                        self.alertMsg = "Please enter username"
+                    }else if(self.password == ""){
+                        self.isLogin = false
+                        self.showAlert = true
+                        self.alertMsg = "Please enter password"
+                    }else if(self.username == "Mukesh" && self.password == "Jain"){
+                        self.isLogin = true
+                        self.showAlert = false
+                    }else{
+                        self.isLogin = false
+                        self.showAlert = true
+                        self.alertMsg = "Invalid username/password"
+                    }
+                     */
+                    self.isLogin = true
+                    self.showAlert = false
                 }){
-                    NavigationLink(destination: HomeView()){
+                    if self.isLogin {
+                        NavigationLink(destination: HomeView()){
+                            LoginButtonContent()
+                        }
+                    }else{
                         LoginButtonContent()
                     }
+                }.alert(isPresented: self.$showAlert){
+                    Alert(title: Text(self.alertMsg))
                 }
                 
             }.padding()
